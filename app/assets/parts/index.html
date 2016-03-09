@@ -1,0 +1,44 @@
+<div flex layout="column" rol="main">
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <h1>Голосование: {{quest.theme}}</h1>
+        </div>
+    </md-toolbar>
+
+    <md-content flex layout="column" md-scroll-y layout-padding>
+        <div layout="row" layout-wrap layout-fill flex-align="space-between center">
+            <div ng-repeat="variant in quest.answer_variants" flex="20" flex-xs="100" flex-sm="50" flex-md="33">
+                <md-card>
+                   <md-card-header>
+                       <md-card-avatar>
+                           <md-icon></md-icon>
+                       </md-card-avatar>
+                       <md-card-header-text>
+                           <h3 class="md-title">{{variant.proj_title}}</h3>
+                       </md-card-header-text>
+                   </md-card-header>
+                   <img ng-src="{{variant.imageUrl || './assets/img/no-image.png'}}" class="md-card-image md-card-image_answer-variant">
+                   <md-card-actions layout="row" layout-align="end center">
+                     <md-button class="md-icon-button" aria-label="Favorite" ng-click="ctrl.setAnswer(variant)">
+                       <md-icon md-svg-icon="./assets/svg/ic_favorite_24px.svg" ng-class="{'vote-mark': answer === variant}"></md-icon>
+                     </md-button>
+                     <span flex></span>
+                   </md-card-actions>
+                 </md-card>
+            </div>
+        </div>
+    </md-content>
+    <footer layout="row" layout-padding layout-align="end center">
+        <span ng-show="!!answer">Ваш выбор: {{answer.proj_title}}</span>
+        <span flex></span>
+        <md-button ng-show="ctrl.hasPrev()" ng-disabled="!ctrl.hasPrev()" ng-click="ctrl.goPrev()">
+            Обратно
+        </md-button>
+        <md-button class="md-primary" ng-show="ctrl.hasNext()" ng-disabled="!ctrl.hasNext() || !answer" ng-click="ctrl.goNext()">
+            Далее
+        </md-button>
+        <md-button class="md-primary" ng-show="!ctrl.hasNext()" ng-disabled="ctrl.hasNext() || !answer || !ctrl.hasAllAnswers()" ng-click="ctrl.doneVoting()">
+            Завершить голосование
+        </md-button>
+    </footer>
+</div>

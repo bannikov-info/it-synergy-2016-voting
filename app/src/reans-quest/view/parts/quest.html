@@ -1,0 +1,70 @@
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+              md-component-id="left"
+              md-is-locked-open="$mdMedia('gt-sm')">
+
+  <md-toolbar class="md-whiteframe-z1">
+    <h1>Вопросы</h1>
+  </md-toolbar>
+
+  <md-list>
+    <md-list-item ng-repeat="it in ul.quests">
+        <md-button ng-click="ul.selectQuest(it)"
+                   ng-class="{'selected' : it === ul.selected }">
+          <!-- <md-icon md-svg-icon="{{it.avatar}}" class="avatar"></md-icon> -->
+          {{it.order}}. {{it.quest}}
+        </md-button>
+    </md-list-item>
+  </md-list>
+</md-sidenav>
+
+
+<div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Показать список вопросов">
+              <md-icon md-svg-icon="menu" ></md-icon>
+            </md-button>
+            <h1>Опросник Реана</h1>
+            <span flex></span>
+            <md-button class="md-icon-button" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Справка">
+              <md-tooltip>Справка</md-tooltip>
+              <md-icon md-svg-icon="help"></md-icon>
+            </md-button>
+        </div>
+
+    </md-toolbar>
+
+    <md-content flex id="content" layout="column" md-scroll-y>
+      <!-- <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon> -->
+      <md-card>
+          <md-toolbar>
+              <div class="md-toolbar-tools">
+                  <h3>Вопрос {{ul.selected.order || 'NaN'}} из {{ul.quests.length}}</h3>
+
+              </div>
+
+          </md-toolbar>
+          <md-card-content>
+              <p>{{ul.selected.quest}}</p>
+          </md-card-content>
+          <md-card-actions layout="row" layout-align="end">
+              <!-- <h3>Ответ {{ul.selected.answer}}</h3> -->
+              <md-button ng-class="{'md-raised': ul.getAnswer(ul.selected)==0}" class="md-primary md-hue-1" aria-label="Нет" ng-click="ul.setAnswer(ul.selected, 0)">Нет</md-button>
+              <md-button ng-class="{'md-raised': ul.getAnswer(ul.selected)==1}" class="md-primary md-hue-1" aria-label="Да" ng-click="ul.setAnswer(ul.selected, 1)">Да</md-button>
+          </md-card-actions>
+      </md-card>
+    </md-content>
+
+    <div layout="row" layout-align="end">
+
+      <md-button class="md-primary md-raised"
+                 aria-label="Обработать ответы"
+                 ng-show="ul.mustProcessAnswers"
+                 ng-click="ul.processAnswers()">Обработать ответы</md-button>
+      <md-button class="md-accent md-raised"
+                 aria-label="Следующий вопрос"
+                 ng-disabled="ul.hasAnswer(ul.selected) || ul.isLastQuest(ul.selected)"
+                 ng-click="ul.selectQuest(ul.selected.order+1)">Следующий вопрос</md-button>
+    </div>
+</div>

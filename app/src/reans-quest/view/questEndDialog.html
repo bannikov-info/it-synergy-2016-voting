@@ -1,0 +1,25 @@
+<md-dialog>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Опросник Реана</h2>
+      </div>
+    </md-toolbar>
+    <form>
+
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <p>
+                    Вы ответили на все воапросы теста.
+                </p>
+                <p>
+                    Что будете делать дальше?
+                </p>
+            </div>
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row" layout-align="end">
+            <md-button class="md-raised" ng-click="dCtrl.goQuests()">Вернуться к списку вопросов</md-button>
+            <md-button class="md-primary md-raised" ng-click="dCtrl.processAnswers()">Обработать результаты</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

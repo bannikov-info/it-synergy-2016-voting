@@ -1,0 +1,26 @@
+<md-bottom-sheet class="md-list md-has-header">
+
+    <md-subheader>
+        Справка по тесту.
+    </md-subheader>
+
+    <p ng-show="cp.questDescription">
+        {{cp.questDescription}}
+    </p>
+    <p ng-hide="cp.questDescription">
+        Инструкция. Отвечая на нижеприведенные вопросы, необходимо выбрать ответ «да» или «нет». Если Вы затрудняетесь с ответом, то вспомните, что «да» объединяет как явное «да», так и «скорее да, чем нет». То же относится и к ответу «нет»: он объединяет явное «нет» и «скорее нет, чем да».
+    </p>
+    <p ng-hide="cp.questDescription">
+        Отвечать на вопросы следует быстро, не задумываясь надолго. Ответ, который первый приходит в голову, как: правило, является и наиболее точным.
+    </p>
+
+    <!-- <md-list>
+      <md-item ng-repeat="item in cp.actions">
+        <md-button ng-click="cp.submitContact(item)" id="item_{{$index}}">
+            <md-icon md-svg-icon="{{ item.icon_url }}"></md-icon>
+            {{item.name}}
+        </md-button>
+      </md-item>
+    </md-list> -->
+
+</md-bottom-sheet>
