@@ -1,6 +1,6 @@
 ;(function () {
     angular
-        .module('questApp', ['ngMaterial', 'ngRoute', 'quest'])
+        .module('questApp', ['ngMaterial', 'ngRoute', 'quest', 'demo'])
         .config(function($mdThemingProvider, $mdIconProvider, $routeProvider){
 
             $mdIconProvider
@@ -28,6 +28,7 @@
                               var theme_id = $route.current.params.theme_id;
                               var def = $q.defer();
 
+                            //   debugger;
                               quests.$promise.then(
                                   function (quests) {
                                       var quest = quests.filter(function (q) {
@@ -47,8 +48,11 @@
                   })
                   .otherwise({
                       redirectTo: '/quests/001'
-                  })
+                  });
 
-        });
+
+
+        })
+
 
 }());

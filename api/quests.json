@@ -42,5 +42,16 @@
             {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_4.png"},
             {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_4.png"}
         ]
+    },
+    {
+        "id": "005",
+        "theme": "Theme #5",
+        "answer_variants": [
+            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": "/api/img/proj_1_theme_5.png"},
+            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": "/api/img/proj_2_theme_5.png"},
+            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": "/api/img/proj_3_theme_5.png"},
+            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_5.png"},
+            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_5.png"}
+        ]
     }
 ]

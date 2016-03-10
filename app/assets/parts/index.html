@@ -37,7 +37,7 @@
         <md-button class="md-primary" ng-show="ctrl.hasNext()" ng-disabled="!ctrl.hasNext() || !answer" ng-click="ctrl.goNext()">
             Далее
         </md-button>
-        <md-button class="md-primary" ng-show="!ctrl.hasNext()" ng-disabled="ctrl.hasNext() || !answer || !ctrl.hasAllAnswers()" ng-click="ctrl.doneVoting()">
+        <md-button class="md-primary" ng-show="!ctrl.hasNext()" ng-disabled="ctrl.hasNext() || !answer || !ctrl.hasAllAnswers()" ng-click="ctrl.doneVoting(quests)">
             Завершить голосование
         </md-button>
     </footer>

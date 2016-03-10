@@ -1,8 +1,14 @@
 ;(function (faker) {
     angular.module('quest')
-           .service('quests', QuestService);
+           .service('quests', QuestResolver)
+           .service('Quest', QuestService);
 
-    QuestService.$inject = ['$resource'];
+    QuestResolver.$inject = ['Quest'];
+    function QuestResolver(Quest) {
+        return Quest.get();
+    }
+
+    QuestService.$inject = ['$resource', '$q'];
     function QuestService($resource) {
         return $resource('/api/quests.json', {},
         {
@@ -15,7 +21,7 @@
                         data.forEach(function (theme) {
                             if(!!theme.answer_variants){
                                 theme.answer_variants.forEach(function (variant) {
-                                    var url = new URL(faker.image.imageUrl(640,480,'business'));
+                                    var url = new URL(faker.image.imageUrl(200,150,'business'));
                                     url.hash = Date.now();
                                     // console.log(url.toString());
                                     variant.imageUrl = url.toString();
@@ -26,7 +32,12 @@
 
                     return data;
                 }
+            },
+            postResults: {
+                method: 'POST',
+                url: '/api/quests'
             }
-        }).get();
+
+        })
     }
 }(faker));

@@ -2,12 +2,13 @@
     angular.module('quest')
            .controller('QuestController', QuestController);
 
-    QuestController.$inject = ['$scope', 'quest', 'quests', '$location'];
+    QuestController.$inject = ['$scope', 'quest', 'quests', '$location', 'Quest'];
     // QuestController.$;
-    function QuestController($scope, quest, quests, $location) {
+    function QuestController($scope, quest, quests, $location, Quest) {
         var self = this;
 
         $scope.quest = quest;
+        $scope.quests = quests;
 
         // $scope.answer = quest.answer;
         Object.defineProperty($scope, 'answer', {
@@ -60,12 +61,29 @@
 
             console.log(res);
             return res;
+        };
+
+        self.doneVoting = function (quests) {
+            // собрать ответы в хеш-таблицу {theme_id: proj_iq}
+            // отправить запрос на сохранение результата голосования
+            var res = quests.reduce(function (prev, quest) {
+                // console.log(prev);
+                // prev[quest.id] = quest.answer.proj_id;
+                // console.log(prev);
+                prev.push({theme_id: quest.id, answer: quest.answer.proj_id})
+                return prev;
+            },[]);
+
+            // debugger;
+            Quest.postResults({}, res, function (resp, status) {
+
+            });
         }
 
         function findFirstQuestOf(quest) {
             // body...
             // var quest = $scope.quest;
-            debugger
+            // debugger
             for (var i = 0; i < quests.length; i++) {
                 if(quests[i].id === quest.id) {return i};
             }
