@@ -3,55 +3,55 @@
         "id": "001",
         "theme": "Theme #1",
         "answer_variants": [
-            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": "/api/img/proj_1_theme_1.png"},
-            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": "/api/img/proj_2_theme_1.png"},
-            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": "/api/img/proj_3_theme_1.png"},
-            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_1.png"},
-            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_1.png"}
+            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": ""},
+            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": ""},
+            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": ""},
+            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": ""},
+            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": ""}
         ]
     },
     {
         "id": "002",
         "theme": "Theme #2",
         "answer_variants": [
-            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": "/api/img/proj_1_theme_2.png"},
-            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": "/api/img/proj_2_theme_2.png"},
-            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": "/api/img/proj_3_theme_2.png"},
-            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_2.png"},
-            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_2.png"}
+            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": ""},
+            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": ""},
+            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": ""},
+            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": ""},
+            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": ""}
         ]
     },
     {
         "id": "003",
         "theme": "Theme #3",
         "answer_variants": [
-            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": "/api/img/proj_1_theme_3.png"},
-            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": "/api/img/proj_2_theme_3.png"},
-            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": "/api/img/proj_3_theme_3.png"},
-            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_3.png"},
-            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_3.png"}
+            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": ""},
+            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": ""},
+            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": ""},
+            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": ""},
+            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": ""}
         ]
     },
     {
         "id": "004",
         "theme": "Theme #4",
         "answer_variants": [
-            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": "/api/img/proj_1_theme_4.png"},
-            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": "/api/img/proj_2_theme_4.png"},
-            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": "/api/img/proj_3_theme_4.png"},
-            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_4.png"},
-            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_4.png"}
+            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": ""},
+            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": ""},
+            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": ""},
+            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": ""},
+            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": ""}
         ]
     },
     {
         "id": "005",
         "theme": "Theme #5",
         "answer_variants": [
-            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": "/api/img/proj_1_theme_5.png"},
-            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": "/api/img/proj_2_theme_5.png"},
-            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": "/api/img/proj_3_theme_5.png"},
-            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": "/api/img/proj_4_theme_5.png"},
-            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": "/api/img/proj_5_theme_5.png"}
+            {"proj_title": "Project #1", "proj_id": "project1", "imageUrl": ""},
+            {"proj_title": "Project #2", "proj_id": "project2", "imageUrl": ""},
+            {"proj_title": "Project #3", "proj_id": "project3", "imageUrl": ""},
+            {"proj_title": "Project #4", "proj_id": "project4", "imageUrl": ""},
+            {"proj_title": "Project #5", "proj_id": "project5", "imageUrl": ""}
         ]
     }
 ]
